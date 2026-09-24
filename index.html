@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinación Social vs Determinantes de la Salud</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="text-slate-800 min-h-screen flex flex-col justify-between selection:bg-rose-500 selection:text-white">
+
+    <!-- Encabezado -->
+    <header class="w-full pt-5 pb-3 px-6 text-center border-b border-slate-200 bg-white/70 backdrop-blur-md sticky top-0 z-50">
+        <h2 id="slide-category" class="text-xs sm:text-sm font-bold uppercase tracking-widest text-emerald-600 mb-1">Anexo: Determinación VS Determinantes</h2>
+        <h1 id="slide-main-title" class="text-xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-rose-600 via-purple-600 to-sky-600 bg-clip-text text-transparent">
+            El origen: ¿De dónde vienen estas ideas?
+        </h1>
+        <div class="progress-track max-w-xl mx-auto mt-4">
+            <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+        </div>
+    </header>
+
+    <!-- Diapositiva -->
+    <main class="flex-grow flex items-center justify-center p-4 sm:p-8 max-w-7xl mx-auto w-full">
+        <div class="relative w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
+
+            <!-- Círculo central VS -->
+            <div class="vs-badge absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-tr from-rose-500 to-sky-500 border-4 border-white z-20">
+                <span class="text-white font-black text-2xl tracking-wider drop-shadow">VS</span>
+            </div>
+
+            <!-- Tarjeta: Determinación Social -->
+            <article class="light-card rounded-3xl p-6 sm:p-8 relative border-t-4 border-rose-400 flex flex-col h-full transform transition-all duration-300 hover:-translate-y-1">
+                <div class="card-badge absolute -top-3 left-8 bg-rose-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Enfoque de Causas Profundas
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-rose-600 mb-4 mt-2 flex items-center gap-2">
+                    <span class="text-2xl">🌱</span> Determinación Social de la Salud
+                </h3>
+                <div id="content-social" class="card-scroll space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed flex-grow"></div>
+            </article>
+
+            <!-- Tarjeta: Determinantes -->
+            <article class="light-card rounded-3xl p-6 sm:p-8 relative border-t-4 border-sky-400 flex flex-col h-full transform transition-all duration-300 hover:-translate-y-1">
+                <div class="card-badge absolute -top-3 left-8 bg-sky-500 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Enfoque de Condiciones Visibles
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-sky-600 mb-4 mt-2 flex items-center gap-2">
+                    <span class="text-2xl">🏙️</span> Determinantes de la Salud
+                </h3>
+                <div id="content-determinantes" class="card-scroll space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed flex-grow"></div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Navegación -->
+    <footer class="w-full py-4 px-4 bg-white/80 backdrop-blur-md border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-5xl mx-auto rounded-t-3xl shadow-sm">
+        <button onclick="prevSlide()" class="px-6 py-2.5 rounded-full border border-slate-300 hover:border-slate-400 bg-white hover:bg-slate-50 text-slate-700 font-semibold transition-all flex items-center gap-2 group cursor-pointer shadow-xs">
+            <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            Anterior
+        </button>
+        <div class="flex flex-col items-center gap-2">
+            <div id="dots-container" class="flex items-center gap-2.5"></div>
+            <span id="slide-counter" class="text-xs font-semibold text-slate-400">1 / 6</span>
+        </div>
+        <button onclick="nextSlide()" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-sky-500 hover:from-rose-400 hover:to-sky-400 text-white font-semibold transition-all shadow-md flex items-center gap-2 group cursor-pointer">
+            Siguiente
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+    </footer>
+
+    <!-- Scripts (datos primero, luego la lógica) -->
+    <script src="js/datos.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

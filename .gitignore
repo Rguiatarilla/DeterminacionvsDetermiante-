@@ -1,0 +1,13 @@
+# Sistema operativo
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+
+# Dependencias / temporales (por si acaso)
+node_modules/
+*.log
+_check.js
